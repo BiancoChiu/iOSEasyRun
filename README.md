@@ -54,15 +54,15 @@
     pymobiledevice3 remote tunneld
     ```
 运行后会出现一些rsd相关信息如
-    ```
+    ```shell
     RSD Address: fd25:5d47:c482::1
     RSD Port: 50594
     Use the follow connection option:
     --rsd fd25:5d47:c482::1 50594
     ```
 
-    
-    ```
+
+    ```shell
     2025-02-25 10:58:59 Biancos-MacBook-Pro.local pymobiledevice3.tunneld.server[22550] INFO [start-tunnel-task-usbmux-00008110-001E154111A2801E-USB] Created tunnel --rsd fd48:b177:8176::1 50597
     ```
 
