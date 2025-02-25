@@ -19,21 +19,24 @@
 
 ### 步骤
 
-2. 安装依赖（建议使用虚拟环境）  
+1. 安装依赖（建议使用虚拟环境）  
     ```shell
     pip3 install -r requirements.txt
     ```
     如果 `pip3` 无法安装，请使用 `pip` 替代  
     如果提示没有需要的版本，请尝试不适用国内源  
-3. 修改配置和路线文件，修改速度和圈数 （见 [这里](https://github.com/iOSRealRun/iOSRealRun-cli/blob/main/README.md#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95) 的 4、5、7 步）
-4. 将设备连接到电脑，解锁，如果请求信任的提示框，请点击信任
-5. 打开终端（cmd 或 PowerShell），执行以下命令获取DDI
+2. 修改配置和路线文件，修改速度和圈数
+    - 路线文件：打开[坐标拾取网站](https://fakerun.myth.cx/)，画一圈，首尾尽量接近，之后将路线内容粘贴到`route.txt`
+    - 速度与圈数：修改`config.yaml`中的速度和圈数
+3. 将设备连接到电脑，解锁，如果请求信任的提示框，请点击信任
+4. 打开终端（cmd 或 PowerShell），执行以下命令获取DDI（仅首次使用需运行）
     ```shell
     pymobiledevice3 mounter auto-mount
     ```
-
-运行gpx.py生成路径文件
-
+5. 运行gpx.py生成路径文件（仅首次使用需运行）
+    ```shell
+    python gpx.py
+    ```
 6. Windows **以管理员身份** 打开终端（cmd 或 PowerShell），先进入项目目录，然后执行以下命令 
     ```shell
     python main.py
@@ -42,9 +45,8 @@
     ```shell
     sudo python3 main.py
     ```
-    > 需要 管理员 或 root 权限是因为需要创建 tun 设备  
 
-如果出现报错可以尝试手动启动
+7. (optional) 如果出现报错可以尝试手动启动
 开启两个终端窗口，第一个窗口运行以下命令之一（需要管理员权限），根据你的不同版本可能需要的命令不同
     ```shell
     pymobiledevice3 lockdown start-tunnel
@@ -57,9 +59,7 @@
     RSD Port: 50594
     Use the follow connection option:
     --rsd fd25:5d47:c482::1 50594
-
     # or
-
     2025-02-25 10:58:59 Biancos-MacBook-Pro.local pymobiledevice3.tunneld.server[22550] INFO [start-tunnel-task-usbmux-00008110-001E154111A2801E-USB] Created tunnel --rsd fd48:b177:8176::1 50597
     ```
 
