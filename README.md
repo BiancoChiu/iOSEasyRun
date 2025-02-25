@@ -47,28 +47,31 @@
     ```
 
 7. (optional) 如果出现报错可以尝试手动启动
-开启两个终端窗口，第一个窗口运行以下命令之一（需要管理员权限），根据你的不同版本可能需要的命令不同
+    - 开启两个终端窗口，第一个窗口运行以下命令之一（需要管理员权限），根据你的不同版本可能需要的命令不同
     ```shell
     pymobiledevice3 lockdown start-tunnel
     pymobiledevice3 remote start-tunnel
     pymobiledevice3 remote tunneld
     ```
-运行后会出现一些rsd相关信息如
-    ```shell
+    - 运行后会出现一些rsd相关信息如
+
+
+    ```
     RSD Address: fd25:5d47:c482::1
     RSD Port: 50594
     Use the follow connection option:
     --rsd fd25:5d47:c482::1 50594
-    ```
 
+    # or
 
-    ```shell
     2025-02-25 10:58:59 Biancos-MacBook-Pro.local pymobiledevice3.tunneld.server[22550] INFO [start-tunnel-task-usbmux-00008110-001E154111A2801E-USB] Created tunnel --rsd fd48:b177:8176::1 50597
     ```
 
-接下来在第二个终端窗口运行以下命令（无需管理员权限），如`pymobiledevice3 developer dvt simulate-location play track.gpx --rsd fd48:b177:8176::1 50597`
+    - 接下来在第二个终端窗口运行以下命令（无需管理员权限）
+
     ```shell
     pymobiledevice3 developer dvt simulate-location play track.gpx --rsd <your_RSD_address> <your_RSD_port>
+    # example: pymobiledevice3 developer dvt simulate-location play track.gpx --rsd fd48:b177:8176::1 50597
     ```
 
 - 按照提示操作，如果一直说没有设备连接，Windows请确保 iTunes 已安装（可能需要打开），重新运行程序，在第3步时请确保设备已连接，解锁并信任
