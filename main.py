@@ -40,8 +40,8 @@ def simulate_location(address, port):
 
     process = subprocess.Popen(
         command,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        # stdout=subprocess.PIPE,
+        # stderr=subprocess.PIPE,
         text=True
     )
 
