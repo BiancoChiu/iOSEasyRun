@@ -2,6 +2,10 @@
 
 本项目基于 [iOSRealRun-cli-17](https://github.com/iOSRealRun/iOSRealRun-cli-17) 修改而来，并更新了依赖的 [pymobiledevice3](https://github.com/doronz88/pymobiledevice3)。
 
+优先推荐使用[这个仓库](https://github.com/BiancoChiu/iOSRealRun-cli-18)，若出现报错无法解决再使用本仓库手动启动。
+
+本质上这是一个用来生成gpx文件的仓库，然后通过pymobiledevice3来让手机模拟定位。
+
 测试环境：
 - 操作系统：MacOS
 - Python版本：3.13

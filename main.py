@@ -1,4 +1,5 @@
 import re
+import sys
 import logging
 import subprocess
 import multiprocessing
@@ -7,7 +8,7 @@ import threading
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def start_tunnel(queue):
-    command = ['python3', '-m', 'pymobiledevice3', 'lockdown', 'start-tunnel']
+    command = [sys.executable, '-m', 'pymobiledevice3', 'lockdown', 'start-tunnel']
 
     process = subprocess.Popen(
         command,
